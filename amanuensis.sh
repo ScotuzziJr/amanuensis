@@ -1,5 +1,11 @@
 #!/bin/bash
 
+check_dependecies() {
+    if ! pip freeze | grep -q lz4 ;then
+        pip install lz4
+    fi
+}
+
 save_pages() {
     export opentabs=$(find ~/ -name "recovery.jsonlz4" -type f);
 
@@ -12,6 +18,8 @@ restore_pages() {
         sleep 1
     done < "saved_urls.txt"
 }
+
+check_dependecies
 
 if [[ $# -eq 0 ]];then
     echo "No arguments supplied. Usage: ./amanuensis.sh [mode]"
