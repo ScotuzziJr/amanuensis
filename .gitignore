@@ -1,2 +1,3 @@
 lab.sh
-saved_urls.txt
+saved_urls*.txt
+*.bat

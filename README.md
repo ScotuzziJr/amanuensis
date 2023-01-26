@@ -12,15 +12,14 @@ Amanuensis combine a Bash script and a Python script to save the urls of open ta
 ## Requisites
 
 - The scripts were written on a Linux environment but I'm working on a Windows version 
-- At this point, Firefox is the only browser supported but I'm also working on that
+- At this point, Firefox is the only browser that you can save urls from, but is possible to restore the urls saved from Firefox on Chrome
 - You must have Python 3 installed
-- You must have lz4 lib installed and you can get it by running `pip install lz4`
 
 ## Usage
 
 Make sure that both Bash and Python scripts are in the same directory. Then run: <br>
-`bash amanuensis.sh save` to save the urls <br>
-`bash amanuensis.sh restore` to restore the tabs
+`bash amanuensis.sh save firefox` to save the urls <br>
+`bash amanuensis.sh restore [firefox | chrome]` to restore the tabs
 
 When saving, a text file called "saved_urls.txt" will be created. Make sure this file exists when trying to restore.
 
